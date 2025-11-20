@@ -1,0 +1,104 @@
+/* Custom styles that couldn't be done with Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Tool card hover effect */
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark .tool-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient underline animation */
+.gradient-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.gradient-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #ec4899);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.gradient-underline:hover::after {
+    transform: scaleX(1);
+}
+
+/* Glowing effect for featured cards */
+.featured-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.featured-card:hover::before {
+    opacity: 1;
+    transform: rotate(30deg) translate(10%, 10%);
+}
+
+/* Search input focus effect */
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.dark .search-input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5);
+}

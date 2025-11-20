@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Nexus Horizon | The Ultimate AI Tools Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        },
+                        secondary: {
+                            500: '#ec4899',
+                            600: '#db2777',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient-x': 'gradient-x 8s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size':'200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size':'200% 200%',
+                                'background-position': 'right center'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center">
+                            <i data-feather="zap" class="text-primary-500 w-6 h-6"></i>
+                            <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">AI Nexus Horizon</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:block ml-10">
+                        <div class="flex space-x-4">
+                            <a href="#writing" class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium">Writing</a>
+                            <a href="#image" class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium">Image</a>
+                            <a href="#video" class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium">Video</a>
+                            <a href="#coding" class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium">Coding</a>
+                            <a href="#automation" class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium">Automation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i data-feather="moon" class="hidden w-5 h-5 text-gray-900 dark:text-white"></i>
+                        <i data-feather="sun" class="hidden w-5 h-5 text-gray-900 dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/10 via-transparent to-secondary-600/10 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                    Discover the <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">Best AI Tools</span> in Every Category
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Curated collection of cutting-edge artificial intelligence tools to boost your productivity and creativity.
+                </p>
+                <div class="mt-10 max-w-md mx-auto">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-feather="search" class="text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" class="block w-full pl-10 pr-3 py-4 border border-gray-300 dark:border-gray-600 rounded-xl bg-white/70 dark:bg-gray-800/70 focus:ring-2 focus:ring-primary-500 focus:border-transparent focus:outline-none transition" placeholder="Search for AI tools...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-gray-900 to-transparent z-10"></div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Featured Tools -->
+        <section class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <i data-feather="star" class="mr-3 text-yellow-500"></i>
+                Featured Tools
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Featured Tool 1 -->
+                <div class="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="p-6 relative">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center">
+                                <i data-feather="pen-tool" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-bold text-gray-900 dark:text-white">Grammarly AI</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">AI-powered writing assistant that helps you write better and more efficiently.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200">
+                                Writing
+                            </span>
+                            <a href="#" class="inline-flex items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                                Visit
+                                <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Tool 2 -->
+                <div class="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="p-6 relative">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center">
+                                <i data-feather="image" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-bold text-gray-900 dark:text-white">DALL-E</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Create realistic images and art from a description in natural language.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary-100 dark:bg-secondary-900 text-secondary-800 dark:text-secondary-200">
+                                Image
+                            </span>
+                            <a href="#" class="inline-flex items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                                Visit
+                                <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Tool 3 -->
+                <div class="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="p-6 relative">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center">
+                                <i data-feather="code" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-bold text-gray-900 dark:text-white">GitHub Copilot</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Your AI pair programmer that helps you write better code faster.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+                                Coding
+                            </span>
+                            <a href="#" class="inline-flex items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                                Visit
+                                <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Sections -->
+        <section id="writing" class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <i data-feather="edit" class="mr-3 text-primary-500"></i>
+                AI Writing Tools
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tool cards for writing section -->
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="writing">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="type" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Jasper</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI content generator for blogs, ads, and more.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="writing">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="book" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Copy.ai</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Generate marketing copy in seconds.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="writing">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="book-open" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Writesonic</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI writer for blogs, ads, and websites.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="writing">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="file-text" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Rytr</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI writing assistant for all your needs.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Tools Section -->
+        <section id="image" class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <i data-feather="image" class="mr-3 text-secondary-500"></i>
+                AI Image Tools
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tool cards for image section -->
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="image">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="camera" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Midjourney</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Create stunning AI-generated artwork.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="image">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="picture" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Stable Diffusion</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Text-to-image diffusion model.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="image">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="aperture" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Artbreeder</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Create and explore AI-generated art.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="image">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="sliders" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Runway ML</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Creative tools powered by machine learning.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Tools Section -->
+        <section id="video" class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <i data-feather="video" class="mr-3 text-red-500"></i>
+                AI Video Tools
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tool cards for video section -->
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="video">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="film" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Synthesia</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Create AI videos with virtual presenters.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="video">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="youtube" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Pictory</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Automatically create short videos from text.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="video">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="play" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Descript</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Edit videos by editing text.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="video">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="tv" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Runway ML</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Video editing powered by AI.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coding Tools Section -->
+        <section id="coding" class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <i data-feather="code" class="mr-3 text-blue-500"></i>
+                AI Coding Tools
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tool cards for coding section -->
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="coding">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="terminal" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">GitHub Copilot</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI pair programmer that helps you write better code.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="coding">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="cpu" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Tabnine</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI assistant for software development.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="coding">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="git-branch" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Replit Ghostwriter</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI that helps you code in the browser.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="coding">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="database" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Codeium</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Free AI-powered code completion tool.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Automation Tools Section -->
+        <section id="automation" class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                <i data-feather="zap" class="mr-3 text-yellow-500"></i>
+                AI Automation Tools
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tool cards for automation section -->
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="automation">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="repeat" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Zapier</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Automate workflows between apps.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="automation">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="refresh-cw" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Make (Integromat)</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Visual platform for workflow automation.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="automation">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="command" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">n8n</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Open source workflow automation tool.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1" data-category="automation">
+                    <div class="p-5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center justify-center mb-4">
+                            <i data-feather="box" class="text-white w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Pipedream</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Connect APIs, run code in response to events.</p>
+                        <a href="#" class="inline-flex items-center text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium">
+                            Visit <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <i data-feather="zap" class="text-primary-500 w-6 h-6"></i>
+                    <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">AI Nexus Horizon</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-primary-500 dark:hover:text-primary-400">
+                        <i data-feather="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-primary-500 dark:hover:text-primary-400">
+                        <i data-feather="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-primary-500 dark:hover:text-primary-400">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center md:text-left">
+                <p class="text-gray-500 text-sm">© 2023 AI Nexus Horizon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.querySelector('[data-feather="sun"]');
+        const moonIcon = document.querySelector('[data-feather="moon"]');
+        
+        // Check for saved user preference or use system preference
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+        
+        // Add event listener to toggle button
+        themeToggle.addEventListener('click', () => {
+            // Toggle icons
+            sunIcon.classList.toggle('hidden');
+            moonIcon.classList.toggle('hidden');
+            
+            // If set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                // If NOT set via local storage previously
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
